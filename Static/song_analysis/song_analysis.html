@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spotify Popularity Project</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+  </head>
+
+  <body>
+
+
+  <!-- Navigation (Stays on Top) -->
+  <div class="w3-top w3-bar w3-black">
+  <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="../analysis_metrics/analysis_metrics.html" class="w3-bar-item w3-button">Analysis Metrics</a>
+  <a href="song_analysis.html" class="w3-bar-item w3-button">Song Analaysis</a>
+  <a href="../artist_analysis/artist_analysis.html" class="w3-bar-item w3-button">Artist Analysis</a>
+  <br>
+  </br>
+  <div class="w3-text-white">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Song Analysis</h1>
+
+        <div class="well">
+          <h5>Song name</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)">
+          </select>
+        </div>
+
+
+        <div id="bar"></div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Song Info</h3></div>
+          <div id="sample-metadata" class="panel-body"></div>
+          <div id="song_name"></div>
+          <div id="tempo"></div>
+          <div id="mode"></div>
+          <div id="explicit"></div>
+          <div id="duration"></div>
+          <div id="key"></div>
+          <div id="popularity"></div>
+        </div>
+
+
+  <!-- Selection -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Start Content -->
+  <div id="home" class="w3-content">
+
+  
+  <!-- End Content -->
+  </div>
+
+
+
+    
+
+
+    <script type="text/javascript" src="../data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
