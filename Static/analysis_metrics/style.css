@@ -4,4 +4,7 @@ body {
   background-color: black;
   text-align: center;
 }
-
+#bar, #bar2 {
+  margin-left: auto;
+  width: 75%;
+}
