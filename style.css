@@ -5,6 +5,14 @@ body {
     text-align: center;
   }
 
+  .w3-content {
+    padding-top: 10px; /* Adjust this value as needed to create space between the title and navigation bar */
+}
+
+    .w3-text-white {
+        padding-top: 20px;
+    }
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
