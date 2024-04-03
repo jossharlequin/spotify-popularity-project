@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Popularity Project</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+  <div class="w3-top w3-bar w3-black">
+    <!-- Image -->
+    <img src="../../Resources/images/spotify-2.svg" alt="Your Image" class="w3-bar-image">
+    
+    <!-- Navigation Links -->
+    <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="static/analysis_metrics/analysis_metrics.html" class="w3-bar-item w3-button">Analysis Metrics</a>
+    <a href="static/song_analysis/song_analysis.html" class="w3-bar-item w3-button">Song Analysis</a>
+    <a href="static/artist_analysis/artist_analysis.html" class="w3-bar-item w3-button">Artist Analysis</a>
+    <a href="static/raw_data/raw_data.html" class="w3-bar-item w3-button">Raw Data</a>
+    <br>
+    </br>
+</div>
+  <div class="w3-content w3-padding" id="home"> <!-- Add padding to the content -->
+    <div class="w3-text-white">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <!-- Title and description -->
+          <h1 class="w3-text-white">Spotify Popularity Project</h1>
+          <p>Spotify API provides a list of audio metrics for each song in their database. This website utilizes this data to create interactive visualizations.</p>
+        </div>
+      </div>
+    </div>
+     <!-- Start Content -->
+     <div class="w3-content">
+        <!-- Image -->
+        <img src="../../Resources/images/spotify-logo.png" alt="The Logo" style="width:100%">
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+  <!-- Title -->
+  <div class="slideshow-title">
+    <h2>Raw Data</h2>
+  </div>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="../../Resources/images/raw-data.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 6</div>
+    <img src="../../Resources/images/chart1.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 6</div>
+    <img src="../../Resources/images/chart2.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 6</div>
+    <img src="../../Resources/images/chart3.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 6</div>
+    <img src="../../Resources/images/chart4.png" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 6</div>
+    <img src="../../Resources/images/chart5.png" style="width:100%">
+  </div>
+  <!-- Previous and Next buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+  <!-- End Content -->
+  <script type="text/javascript" src="../../Static/java.js"></script>
+</body>
+</html>
