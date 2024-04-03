@@ -1,19 +1,41 @@
+/* Reset styles */
 body {
-    padding: 0;
-    margin: 0;
-    background-color: black;
-    text-align: center;
-  }
-
-  .w3-content {
-    padding-top: 10px; /* Adjust this value as needed to create space between the title and navigation bar */
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  text-align: center;
 }
 
-    .w3-text-white {
-        padding-top: 20px;
-    }
+/* Navigation styles */
+.w3-top.w3-bar {
+  border-bottom: 10px solid #1DB954;
+}
 
-* {box-sizing:border-box}
+.w3-bar .w3-bar-item {
+  padding: 0;
+  float: left;
+  width: auto;
+  border: none;
+  display: block;
+  outline: 0;
+}
+
+.w3-bar-image {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+/* Content padding */
+.w3-content {
+  padding-top: 10px;
+}
+
+/* Text color and padding */
+.w3-text-white {
+  padding-top: 20px;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -22,13 +44,26 @@ body {
   margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
-    border: 10px solid #1DB954; /* Add a border with a solid style and color #1DB954 */
+/* Slideshow title */
+.slideshow-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Next & previous buttons */
+.slideshow-title h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Slideshow images */
+/* Slideshow images */
+.mySlides {
+  display: none;
+  border: 10px solid #1DB954;
+  width: auto; /* Let the width adjust automatically to maintain aspect ratio */
+}
+
+/* Slideshow navigation buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -44,23 +79,21 @@ body {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-/* Previous button */
-.prev {
-    left: 0; /* Position to the left */
-    border-radius: 3px 0 0 3px; /* Keep the rounded border on the left side */
-  }
 
-/* On hover, add a black background color with a little bit see-through */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
+/* Slideshow caption text */
 .text {
   color: #1DB954;
   font-size: 24px;
@@ -80,7 +113,7 @@ body {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* Slideshow dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
