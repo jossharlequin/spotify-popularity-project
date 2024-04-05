@@ -18,27 +18,26 @@ function optionChanged(new_data) {
 }
 // initizlize the graph for first song
 function graph() {
-    let red = 'rgba(255,56,91,0.8)'
-    let green = 'rgba(0,251,30,0.65)'
-    let gold = 'rgba(208, 214, 26, 0.8)'
-    let brown = 'rgba(136, 113, 43, 0.8)'
+    let green = 'rgba(0, 194, 61, 1)'
+    let blue = 'rgba(0, 194, 87, 0.51)'
+
     // set data for graph
     let trace1 = {
-        x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','-Loudness','Speechiness','Valence','Popularity'],
+        x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','Loudness','Speechiness','Valence','Popularity'],
         y: [data[0]['acousticness'],data[0]['danceability'],data[0]['energy'],data[0]['instrumentalness'],data[0]['liveness'],-data[0]['loudness']/10,data[0]['speechiness'],data[0]['valence'],data[0]['popularity']/100],
         type: 'bar',
         orientation: 'v',
         marker: {
             color: [
-            red,
+            green,
+            blue,
+            blue,
+            blue,
             green,
             green,
+            blue,
             green,
-            red,
-            red,
-            green,
-            red,
-            brown
+            blue
             ]
         }
     };
@@ -72,58 +71,76 @@ function graph() {
 function regraph(new_data) {
     let plot_data = [];
     let trace1 = {};
-    let red = 'rgba(255, 56, 91, 0.8)'
-    let green = 'rgba(0,251,30,0.65)'
-    let gold = 'rgba(208, 214, 26, 0.8)'
-    let brown = 'rgba(136, 113, 43, 0.8)'
-    if (data[new_data]['acousticness'] > 0.4932139761498802) {
-        acousticness_color = red
-    } else {
+    let green = 'rgba(0, 194, 61, 1)'
+    let blue = 'rgba(0, 194, 87, 0.51)'
+    let purple = 'rgba(211, 0, 155, 1)'
+
+    if (data[new_data]['acousticness'] > 0.983) {
+        acousticness_color = purple
+    } else if (data[new_data]['acousticness'] > 0.4932139761498802) {
         acousticness_color = green
-    }
-    if (data[new_data]['danceability'] > 0.5381497172015609) {
-        danceability_color = red
     } else {
+        acousticness_color = blue
+    }
+    if (data[new_data]['danceability'] > 0.76) {
+        danceability_color = purple
+    } else if (data[new_data]['danceability'] > 0.5381497172015609) {
         danceability_color = green
-    }
-    if (data[new_data]['energy'] > 0.4885931303603694) {
-        energy_color = red
     } else {
+        danceability_color = blue
+    }
+    if (data[new_data]['energy'] > 0.867) {
+        energy_color = purple
+    } else if (data[new_data]['energy'] > 0.4885931303603694) {
         energy_color = green
-    }
-    if (data[new_data]['instrumentalness'] > 0.16193714313891552) {
-        instrumentalness_color = red
     } else {
+        energy_color = blue
+    }
+    if (data[new_data]['instrumentalness'] > 0.831) {
+        instrumentalness_color = purple
+    } else if (data[new_data]['instrumentalness'] > 0.16193714313891552) {
         instrumentalness_color = green
-    }
-    if (data[new_data]['liveness'] > 0.2066903493634828) {
-        liveness_color = red
     } else {
+        instrumentalness_color = blue
+    }
+    if (data[new_data]['liveness'] > 0.408) {
+        liveness_color = purple
+    } else if (data[new_data]['liveness'] > 0.2066903493634828) {
         liveness_color = green
-    }
-    if (data[new_data]['loudness'] > -11.37028930192044) {
-        loudness_color = red
     } else {
+        liveness_color = blue
+    }
+    if (data[new_data]['loudness'] > -5.0139) {
+        loudness_color = purple
+    } else if (data[new_data]['loudness'] > -11.37028930192044) {
         loudness_color = green
-    }
-    if (data[new_data]['speechiness'] > 0.09405769441289161) {
-        speechiness_color = red
     } else {
+        loudness_color = blue
+    }
+    if (data[new_data]['speechiness'] > 0.192) {
+        speechiness_color = purple
+    } else if (data[new_data]['speechiness'] > 0.09405769441289161) {
         speechiness_color = green
-    }
-    if (data[new_data]['valence'] > 0.5320951423473742) {
-        valence_color = red
     } else {
+        speechiness_color = blue
+    }
+    if (data[new_data]['valence'] > 0.887) {
+        valence_color = purple
+    } else if (data[new_data]['valence'] > 0.5320951423473742) {
         valence_color = green
-    }
-    if (data[new_data]['popularity'] > 31.55) {
-        popularity_color = gold
     } else {
-        popularity_color = brown
+        valence_color = blue
+    }
+    if (data[new_data]['popularity'] > 60) {
+        popularity_color = purple
+    } else if (data[new_data]['popularity'] > 31.55) {
+        popularity_color = green
+    } else {
+        popularity_color = blue
     }
     // set data for graph
     trace1 = {
-        x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','-Loudness','Speechiness','Valence','Popularity'],
+        x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','Loudness','Speechiness','Valence','Popularity'],
         y: [data[new_data]['acousticness'],data[new_data]['danceability'],data[new_data]['energy'],data[new_data]['instrumentalness'],data[new_data]['liveness'],-data[new_data]['loudness']/10,data[new_data]['speechiness'],data[new_data]['valence'],data[new_data]['popularity']/100],
         type: 'bar',
         orientation: 'v',
