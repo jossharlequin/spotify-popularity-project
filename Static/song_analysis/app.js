@@ -25,13 +25,26 @@ function optionChanged(new_data) {
 
 // initizlize the graph for first ID
 function graph() {
-
+    let red = 'rgba(255,56,91,0.8)'
+    let green = 'rgba(0,251,30,0.65)'
     // set data for graph
     let trace1 = {
         x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','Loudness','Speechiness','Valence'],
         y: [data[0]['acousticness'],data[0]['danceability'],data[0]['energy'],data[0]['instrumentalness'],data[0]['liveness'],-data[0]['loudness']/10,data[0]['speechiness'],data[0]['valence']],
         type: 'bar',
-        orientation: 'v'
+        orientation: 'v',
+        marker: {
+            color: [
+            red,
+            green,
+            green,
+            green,
+            red,
+            red,
+            green,
+            red
+            ]
+        }
     };
     let layout = {
         xaxis: {
@@ -66,19 +79,77 @@ function regraph(new_data) {
 
     let plot_data = [];
     let trace1 = {};
+    let red = 'rgba(255, 56, 91, 0.8)'
+    let green = 'rgba(0,251,30,0.65)'
+
+    if (data[new_data]['acousticness'] > 0.4932139761498802) {
+        acousticness_color = red
+    } else {
+        acousticness_color = green
+    }
+
+    if (data[new_data]['danceability'] > 0.5381497172015609) {
+        danceability_color = red
+    } else {
+        danceability_color = green
+    }
+
+    if (data[new_data]['energy'] > 0.4885931303603694) {
+        energy_color = red
+    } else {
+        energy_color = green
+    }
+    if (data[new_data]['instrumentalness'] > 0.16193714313891552) {
+        instrumentalness_color = red
+    } else {
+        instrumentalness_color = green
+    }
+    if (data[new_data]['liveness'] > 0.2066903493634828) {
+        liveness_color = red
+    } else {
+        liveness_color = green
+    }
+    if (data[new_data]['loudness'] > -11.37028930192044) {
+        loudness_color = red
+    } else {
+        loudness_color = green
+    }
+    if (data[new_data]['speechiness'] > 0.09405769441289161) {
+        speechiness_color = red
+    } else {
+        speechiness_color = green
+    }
+    if (data[new_data]['valence'] > 0.5320951423473742) {
+        valence_color = red
+    } else {
+        valence_color = green
+    }
 
     // set data for graph
     trace1 = {
         x: ['Acousticness','Danceability','Energy','Instrumentalness','Liveness','Loudness','Speechiness','Valence'],
         y: [data[new_data]['acousticness'],data[new_data]['danceability'],data[new_data]['energy'],data[new_data]['instrumentalness'],data[new_data]['liveness'],-data[new_data]['loudness']/10,data[new_data]['speechiness'],data[new_data]['valence']],
         type: 'bar',
-        orientation: 'v'
+        orientation: 'v',
+        marker: {
+            color: [
+                acousticness_color,
+                danceability_color,
+                energy_color,
+                instrumentalness_color,
+                liveness_color,
+                loudness_color,
+                speechiness_color,
+                valence_color
+            ]
+        }
 
     };
     // plot graph
     plot_data = [trace1];
     console.log(plot_data[0]);
     Plotly.restyle('bar', 'x', [plot_data[0]['x']]);
+    Plotly.restyle('bar', 'marker', [plot_data[0]['marker']])
     Plotly.restyle('bar', 'y', [plot_data[0]['y']]);
 }
 
