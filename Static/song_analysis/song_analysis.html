@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Spotify Popularity Project</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spotify Popularity Project</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
   <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
+  <link rel="stylesheet" type="text/css" href="../../style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-
-  </head>
-
-  <body>
-
-
-  <!-- Navigation (Stays on Top) -->
+</head>
+<body>
   <div class="w3-top w3-bar w3-black">
-  <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
-  <a href="../analysis_metrics/analysis_metrics.html" class="w3-bar-item w3-button">Analysis Metrics</a>
-  <a href="song_analysis.html" class="w3-bar-item w3-button">Song Analaysis</a>
-  <a href="../artist_analysis/artist_analysis.html" class="w3-bar-item w3-button">Artist Analysis</a>
-  <br>
-  </br>
-  <div class="w3-text-white">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Song Analysis</h1>
+    <!-- Image -->
+    <img src="../../Resources/images/spotify-2.svg" alt="Your Image" class="w3-bar-image">
+    
+    <!-- Navigation Links -->
+    <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="../../static/analysis_metrics/analysis_metrics.html" class="w3-bar-item w3-button">Analysis Metrics</a>
+    <a href="../../static/song_analysis/song_analysis.html" class="w3-bar-item w3-button">Song Analysis</a>
+    <a href="../../static/artist_analysis/artist_analysis.html" class="w3-bar-item w3-button">Artist Analysis</a>
+    <a href="../../static/raw_data/raw_data.html" class="w3-bar-item w3-button">Raw Data</a>
+    <a href="../../static/prediction_models/prediction_models.html" class="w3-bar-item w3-button">Prediction Models</a>
+  </div>
 
-        <div class="well">
-          <h5>Song name</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)">
-          </select>
+  <div class="w3-content w3-padding" id="home">
+    <!-- Title and description -->
+    <div class="w3-text-white">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <h1 class="w3-text-white">Spotify Popularity Project</h1>
+          <p>Spotify API provides a list of audio metrics for each song in their database. This website utilizes this data to create interactive visualizations.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Start Content -->
+    <div class="w3-content">
+      <!-- Image -->
+      <img src="../../Resources/images/spotify-logo.png" alt="The Logo" style="width:100%">
+      <!-- chart container -->
+      <div class="chart-container">
+        <!-- Title -->
+        <div class="chart-title">
+          <h2>Song Analysis</h2>
+        </div>
+        
+        <div class="container">
+          <div class="well">
+            <h5>Song name</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          
+          <div class="chart" id="bar"></div>
         </div>
 
-
-        <div id="bar"></div>
-
-        <div class="panel panel-primary">
+        <div class="w3-text-white">
           <div class="panel-heading">
-            <h3 class="panel-title">Song Info</h3></div>
+            <h3 class="panel-title">Song Info</h3>
+          </div>
           <div id="sample-metadata" class="panel-body"></div>
           <div id="song_name"></div>
           <div id="tempo"></div>
@@ -52,53 +69,16 @@
           <div id="key"></div>
           <div id="popularity"></div>
         </div>
-
+      </div>
+    </div>
+  </div>
 
   <!-- Selection -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
-  <!-- Start Content -->
-  <div id="home" class="w3-content">
-
-  
-  <!-- End Content -->
-  </div>
-
-
-
-    
-
-
-    <script type="text/javascript" src="../data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-
-    
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </body>
+  <!-- Scripts -->
+  <script type="text/javascript" src="../../Static/data.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
 </html>
+

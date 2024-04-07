@@ -2,13 +2,14 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: black;
+  background: linear-gradient(to right, #1DB954 0%, black 15%, black 85%, #1DB954 100%),
+              linear-gradient(to left, #1DB954 0%, black 15%, black 85%, #1DB954 100%);
   text-align: center;
 }
 
 /* Navigation styles */
 .w3-top.w3-bar {
-  border-bottom: 10px solid #1DB954;
+  border-bottom: 10px solid #B91D82;
 }
 
 .w3-bar .w3-bar-item {
@@ -42,6 +43,7 @@ body {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  border: 10px solid #B91D82;
 }
 
 /* Slideshow title */
@@ -56,10 +58,8 @@ body {
 }
 
 /* Slideshow images */
-/* Slideshow images */
 .mySlides {
   display: none;
-  border: 10px solid #1DB954;
   width: auto; /* Let the width adjust automatically to maintain aspect ratio */
 }
 
@@ -73,7 +73,7 @@ body {
   padding: 16px;
   color: #1DB954;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -95,7 +95,7 @@ body {
 
 /* Slideshow caption text */
 .text {
-  color: #1DB954;
+  color: #B91D82;
   font-size: 24px;
   padding: 8px 12px;
   position: absolute;
@@ -138,4 +138,64 @@ body {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Dropdown style */
+.well select {
+  width: 1000px; /* Set the width to 100% of its container */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure dropdown is above other elements */
+#selDataset {
+  position: relative;
+  z-index: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure chart is below dropdown */
+#bar {
+  position: relative;
+  z-index: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.well, #bar {
+  width: 1000px !important; /* Set the width to 100%, overriding other styles */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slideshow title */
+.chart-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-title h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.container {
+  border: 10px solid #B91D82; /* Add border around the container */
+  display: inline-block; /* Ensure container size adjusts to its content */
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.well h5 {
+  color: #fff; /* Example style for the song name */
+  font-size: 18px; /* Example font size for the song name */
+  text-align: left; /* Align the text to the left */
+  padding-left: 5px; /* Add 20px padding from the left */
+}
+
+.chart {
+  margin-left: auto;
+  margin-right: auto;
 }
