@@ -9,7 +9,7 @@ body {
 
 /* Navigation styles */
 .w3-top.w3-bar {
-  border-bottom: 10px solid #B91D82;
+  border-bottom: 10px solid #c0c0c0;
 }
 
 .w3-bar .w3-bar-item {
@@ -43,7 +43,7 @@ body {
   max-width: 1000px;
   position: relative;
   margin: auto;
-  border: 10px solid #B91D82;
+  border: 10px solid #c0c0c0;
 }
 
 /* Slideshow title */
@@ -95,9 +95,9 @@ body {
 
 /* Slideshow caption text */
 .text {
-  color: #B91D82;
+  color: #1DB954;
   font-size: 24px;
-  padding: 8px 12px;
+  padding: 12px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
@@ -181,7 +181,7 @@ body {
 }
 
 .container {
-  border: 10px solid #B91D82; /* Add border around the container */
+  border: 10px solid #c0c0c0; /* Add border around the container */
   display: inline-block; /* Ensure container size adjusts to its content */
   position: center;
   margin-left: auto;
@@ -196,6 +196,38 @@ body {
 }
 
 .chart {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for text and description */
+.content-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  padding: 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
+  text-align: center; /* Center the text horizontally */
+}
+
+/* Text */
+.text {
+  color: white;
+  display: block;
+  margin-bottom: 10px; /* Add margin to create space */
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Description */
+.description {
+  color: white;
+  display: block;
+  margin-top: 20px; /* Add margin to create space */
+  margin-bottom: -10px;
   margin-left: auto;
   margin-right: auto;
 }
