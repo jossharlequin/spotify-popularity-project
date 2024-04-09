@@ -1,5 +1,8 @@
 # spotify-popularity-project
-The goal of this project will be to analyze data from spotify which encompasses the auditory features of a song and the popularity. The target variable for our machine learning model will be the popularity, scored from 0-100 where 0 is not recomended and 100 is highly recommended.
+The goal of this project will be to analyze data, using machine learning algorithms, from spotify which encompasses the auditory features of a song and the popularity. The target variable for our machine learning model will be the popularity, scored from 0-100 where 0 is not recomended and 100 is highly recommended.
+
+# Contents
+The contents of this repository include the jupyter notebooks where data cleaning and the machine learning algorithms are run. A CSV file recording the modifications made to the machine learning algorithms to improve performance. And the HTML/Javascript used to create the webpage where results of the ML models are displayed. The SQL query used to create the table in postgress and the data retrieved from postgress as a csv.    
 
 # Process
 The data was retrieved from Spotify and cleaned by removal of 4 variables: Artist Name, Song Name, Release Year, and Release Date. The two former were removed because they were not integer values while the latter two were removed for inconsistent data. The Popularity variable was selected as the Y predictive variable to be used in the future models. 
