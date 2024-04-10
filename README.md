@@ -1,6 +1,4 @@
 # spotify-popularity-project
-# Website
-https://jossharlequin.github.io/spotify-popularity-project/index.html
 The goal of this project will be to analyze data, using machine learning algorithms, from spotify which encompasses the auditory features of a song and the popularity. The target variable for our machine learning model will be the popularity, scored from 0-100 where 0 is not recomended and 100 is highly recommended.
 
 # Contents
@@ -31,5 +29,8 @@ Feature Imprtances
   Explicitness 1.3%
   Mode .5%
 
-  # Code
-  Slideshow code was originally sourced from here: https://www.w3schools.com/howto/howto_js_slideshow.asp
+# Website
+https://jossharlequin.github.io/spotify-popularity-project/index.html
+  
+# Code
+Slideshow code was originally sourced from here: https://www.w3schools.com/howto/howto_js_slideshow.asp
