@@ -15,22 +15,23 @@ Different binning methods were used during the Neural Network and Random Forest 
 Using the Random Forest model and the Neural Network, an accuracy of 79% was achieved when the target variable was grouped into two equally sized bins. The highest performing model, the Random Forest had a final accuracy score of 79.00%. The Neural Networks highest accuracy score was 78.96%. Using the Random Forest model, the features were ranked based off of importance.
 
 Feature Imprtances
-  Acousticness 30.3%
-  Loudness 12.5%
-  Duration 8.2%
-  Speechiness 7.7%
-  Valence 6.9%
-  Danceability 6.6%
-  Liveness 6.1%
-  Tempo 5.7%
-  Energy 5.6%
-  Instrumentalness 5.2%
-  Key 2.6%
-  Explicitness 1.3%
-  Mode .5%
+ 0.198 'acousticness'
+ 0.147 'loudness'
+ 0.107 'energy'
+ 0.097 'duration_seconds'
+ 0.073 'speechiness'
+ 0.069 'danceability'
+ 0.069 'valence'
+ 0.063 'instrumentalness'
+ 0.062 'liveness'
+ 0.057 'tempo'
+ 0.030 'key'
+ 0.015 'explicit'
+ 0.007 'mode'
 
 # Website
 https://jossharlequin.github.io/spotify-popularity-project/index.html
   
 # Code
 Slideshow code was originally sourced from here: https://www.w3schools.com/howto/howto_js_slideshow.asp
+.gitignore was sourced from https://github.com/github/gitignore/blob/main/Python.gitignore
