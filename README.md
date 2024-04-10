@@ -28,3 +28,6 @@ Feature Imprtances
   Key 2.6%
   Explicitness 1.3%
   Mode .5%
+
+  # Code
+  Slideshow code was originally sourced from here: https://www.w3schools.com/howto/howto_js_slideshow.asp
